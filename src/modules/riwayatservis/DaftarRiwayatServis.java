@@ -32,9 +32,9 @@ public class DaftarRiwayatServis extends javax.swing.JPanel {
             Startup.getInstance().setUIFont(new javax.swing.plaf.FontUIResource("Tahoma", Font.PLAIN, 11));
             UIManager.setLookAndFeel(Startup.getInstance().getLookAndFeel());
             initComponents();
-            tblDataController = new TableController(this, "pelanggan", ApplicationLogic.getInstance().getQueryDaftarPelanggan(), tblSukuCadang, null, "idpelanggan", true);
+            tblDataController = new TableController(this, "pelanggan", ApplicationLogic.getInstance().getQueryDaftarPasien(), tblSukuCadang, null, "idpelanggan", true);
             tblDataController.setState(TableController.STATE_BROWSE);
-            tblData2Controller = new TableController(this, "pelanggan", ApplicationLogic.getInstance().getQueryDaftarPelanggan(), tblItemServis, null, "idpelanggan", true);
+            tblData2Controller = new TableController(this, "pelanggan", ApplicationLogic.getInstance().getQueryDaftarPasien(), tblItemServis, null, "idpelanggan", true);
             tblData2Controller.setState(TableController.STATE_BROWSE);
             cboPelangganActionPerformed(null);
         } catch (ClassNotFoundException ex) {

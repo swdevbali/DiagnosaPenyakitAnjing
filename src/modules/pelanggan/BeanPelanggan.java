@@ -1,5 +1,5 @@
 
-package modules.pasien;
+package modules.pelanggan;
 
 import core.gui.InputPanel;
 import javax.swing.JOptionPane;
@@ -9,10 +9,10 @@ import modules.ApplicationStartup;
  *
  * @author  PRAM WEE
  */
-public class BeanPasien extends InputPanel {
+public class BeanPelanggan extends InputPanel {
 
     /** Creates new form BeanForm */
-    public BeanPasien() {
+    public BeanPelanggan() {
         initComponents();
         super.setPnlUtama(pnlUtama);
         ApplicationStartup.getInstance().initialize();
@@ -36,6 +36,8 @@ public class BeanPasien extends InputPanel {
         txtNama = new core.dataview.JTextFieldEx();
         txtAlamat = new core.dataview.JTextFieldEx();
         txtHP = new core.dataview.JTextFieldEx();
+        txtStatus = new core.dataview.JTextFieldEx();
+        jLabel6 = new javax.swing.JLabel();
 
         jLabel3.setText("Nama");
 
@@ -66,6 +68,11 @@ public class BeanPasien extends InputPanel {
         txtHP.setText("jTextFieldEx1");
         txtHP.setFieldName("hp");
 
+        txtStatus.setText("jTextFieldEx1");
+        txtStatus.setFieldName("status");
+
+        jLabel6.setText("Status");
+
         javax.swing.GroupLayout pnlUtamaLayout = new javax.swing.GroupLayout(pnlUtama);
         pnlUtama.setLayout(pnlUtamaLayout);
         pnlUtamaLayout.setHorizontalGroup(
@@ -74,21 +81,25 @@ public class BeanPasien extends InputPanel {
                 .addContainerGap()
                 .addGroup(pnlUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
+                    .addGroup(pnlUtamaLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(104, 104, 104)
+                        .addGroup(pnlUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtNama, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                            .addComponent(txtAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(pnlUtamaLayout.createSequentialGroup()
+                        .addGroup(pnlUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6))
+                        .addGap(76, 76, 76)
+                        .addGroup(pnlUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtHP, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlUtamaLayout.createSequentialGroup()
                         .addComponent(btnOK)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnBatal)
-                        .addGap(110, 110, 110))
-                    .addGroup(pnlUtamaLayout.createSequentialGroup()
-                        .addGroup(pnlUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel5))
-                        .addGap(68, 68, 68)
-                        .addGroup(pnlUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtHP, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(pnlUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtNama, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
-                                .addComponent(txtAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(110, 110, 110)))
                 .addContainerGap())
         );
         pnlUtamaLayout.setVerticalGroup(
@@ -109,7 +120,11 @@ public class BeanPasien extends InputPanel {
                 .addGroup(pnlUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addComponent(txtHP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62)
+                .addGap(9, 9, 9)
+                .addGroup(pnlUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(37, 37, 37)
                 .addGroup(pnlUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBatal)
                     .addComponent(btnOK))
@@ -122,13 +137,13 @@ public class BeanPasien extends InputPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(pnlUtama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(pnlUtama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -145,11 +160,13 @@ public class BeanPasien extends InputPanel {
     private javax.swing.JButton btnOK;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel pnlUtama;
     private core.dataview.JTextFieldEx txtAlamat;
     private core.dataview.JTextFieldEx txtHP;
     private core.dataview.JTextFieldEx txtNama;
+    private core.dataview.JTextFieldEx txtStatus;
     // End of variables declaration//GEN-END:variables
 
     @Override
@@ -210,7 +227,7 @@ public class BeanPasien extends InputPanel {
 
     @Override
     protected String delegateGetInsertSql() {
-        return "insert into pasien(nama," +
+        return "insert into pelanggan(nama," +
                 "alamat,HP)" +
                 "values('" +
                 txtNama.getText() + "','" +
@@ -220,11 +237,12 @@ public class BeanPasien extends InputPanel {
 
     @Override
     protected String delegateGetUpdateSql(String rowId) {
-        return "update pasien set nama='" + txtNama.getText() + "'," +
+        return "update pelanggan set nama='" + txtNama.getText() + "'," +
                 "alamat='" + txtAlamat.getText() + "'," +
+                "status='" + txtStatus.getText() + "'," +
                 "hp='" + txtHP.getText() + "'" +
               
-                " where idpasien=" + rowId;
+                " where idpelanggan=" + rowId;
     }
 
     @Override

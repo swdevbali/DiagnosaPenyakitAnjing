@@ -1,7 +1,7 @@
 
 package modules.sukucadang;
 
-import modules.pelanggan.*;
+import modules.pasien.*;
 import modules.ApplicationLogic;
 import core.gui.TableController;
 

@@ -5,7 +5,7 @@ import modules.itemservice.DaftarItemService;
 import modules.sukucadang.DaftarSukuCadang;
 import modules.log.LogPanel;
 import modules.outbox.DaftarOutbox;
-import modules.pelanggan.DaftarPelanggan;
+import modules.pasien.DaftarPasien;
 import modules.mobil.DaftarMobil;
 import modules.riwayatservis.DaftarRiwayatServis;
 import modules.servismobil.DaftarServisMobil;
@@ -14,19 +14,19 @@ import modules.servismobil.DaftarServisMobil;
  *
  * @author  PRAM WEE
  */
-public class ServisMobil extends javax.swing.JPanel {
+public class MenuUtama extends javax.swing.JPanel {
 
     /** Creates new form Pegawai */
-    private static ServisMobil instance = null;
+    private static MenuUtama instance = null;
 
-    public static ServisMobil getInstance() {
+    public static MenuUtama getInstance() {
         if (instance == null) {
-            instance = new ServisMobil();
+            instance = new MenuUtama();
         }
         return instance;
     }
 
-    private ServisMobil() {
+    private MenuUtama() {
         initComponents();
         btnHome.doClick();
 
@@ -70,7 +70,7 @@ public class ServisMobil extends javax.swing.JPanel {
 
         buttonGroup1.add(btnPelanggan);
         btnPelanggan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pelanggan.gif"))); // NOI18N
-        btnPelanggan.setText("Pelanggan");
+        btnPelanggan.setText("Pasien");
         btnPelanggan.setFocusable(false);
         btnPelanggan.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnPelanggan.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -196,7 +196,7 @@ public class ServisMobil extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
     private void btnPelangganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPelangganActionPerformed
-        scrollUtama.setViewportView(DaftarPelanggan.getInstance());
+        scrollUtama.setViewportView(DaftarPasien.getInstance());
 }//GEN-LAST:event_btnPelangganActionPerformed
 
     public void setModul(int i) {

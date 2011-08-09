@@ -1,5 +1,5 @@
 
-package modules.pasien;
+package modules.pelanggan;
 
 import modules.ApplicationLogic;
 import core.gui.TableController;
@@ -8,22 +8,22 @@ import core.gui.TableController;
  *
  * @author  PRAM WEE
  */
-public class DaftarPasien extends javax.swing.JPanel {
+public class DaftarPelanggan extends javax.swing.JPanel {
 
-    private static DaftarPasien instance = null;
+    private static DaftarPelanggan instance = null;
     private TableController tblPelangganController = null;
 
-    public static DaftarPasien getInstance() {
+    public static DaftarPelanggan getInstance() {
         if (instance == null) {
-            instance = new DaftarPasien();
+            instance = new DaftarPelanggan();
         }
         return instance;
     }
 
-    private DaftarPasien() {
+    private DaftarPelanggan() {
         initComponents();
-        tblPelangganController = new TableController(this, "pasien", ApplicationLogic.getInstance().getQueryDaftarPasien(), tblPasien, beanPasien,"idpasien", true);
-        beanPasien.setTableController(tblPelangganController);
+        tblPelangganController = new TableController(this, "pelanggan", ApplicationLogic.getInstance().getQueryDaftarPelanggan(), tblPelanggan, beanPelanggan,"idpelanggan", true);
+        beanPelanggan.setTableController(tblPelangganController);
         tblPelangganController.setState(TableController.STATE_BROWSE);
         tblPelangganController.loadTable();
     }
@@ -38,16 +38,16 @@ public class DaftarPasien extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblPasien = new javax.swing.JTable();
+        tblPelanggan = new javax.swing.JTable();
         btnTambah = new javax.swing.JButton();
         btnUbah = new javax.swing.JButton();
         btnHapus = new javax.swing.JButton();
         btnTambah3 = new javax.swing.JButton();
-        beanPasien = new modules.pasien.BeanPasien();
+        beanPelanggan = new modules.pelanggan.BeanPelanggan();
 
         setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        tblPasien.setModel(new javax.swing.table.DefaultTableModel(
+        tblPelanggan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -58,17 +58,17 @@ public class DaftarPasien extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tblPasien.addMouseListener(new java.awt.event.MouseAdapter() {
+        tblPelanggan.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tblPasienMouseClicked(evt);
+                tblPelangganMouseClicked(evt);
             }
         });
-        tblPasien.addKeyListener(new java.awt.event.KeyAdapter() {
+        tblPelanggan.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                tblPasienKeyPressed(evt);
+                tblPelangganKeyPressed(evt);
             }
         });
-        jScrollPane1.setViewportView(tblPasien);
+        jScrollPane1.setViewportView(tblPelanggan);
 
         btnTambah.setText("Tambah");
         btnTambah.addActionListener(new java.awt.event.ActionListener() {
@@ -106,10 +106,8 @@ public class DaftarPasien extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(beanPasien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(282, 282, 282)
-                        .addComponent(btnTambah3)
-                        .addGap(517, 517, 517))
+                        .addComponent(beanPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(410, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -118,38 +116,36 @@ public class DaftarPasien extends javax.swing.JPanel {
                                 .addComponent(btnUbah)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnHapus)
-                                .addGap(594, 594, 594))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 860, Short.MAX_VALUE))
-                        .addGap(423, 423, 423))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnTambah3)
+                                .addGap(497, 497, 497))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 785, Short.MAX_VALUE))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(btnTambah3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(beanPasien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap()
+                .addComponent(beanPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnHapus)
                     .addComponent(btnUbah)
-                    .addComponent(btnTambah))
+                    .addComponent(btnTambah)
+                    .addComponent(btnTambah3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tblPasienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblPasienMouseClicked
+    private void tblPelangganMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblPelangganMouseClicked
         tblPelangganController.fillInputPanel();
-}//GEN-LAST:event_tblPasienMouseClicked
+}//GEN-LAST:event_tblPelangganMouseClicked
 
-    private void tblPasienKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tblPasienKeyPressed
+    private void tblPelangganKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tblPelangganKeyPressed
         tblPelangganController.fillInputPanel();
-}//GEN-LAST:event_tblPasienKeyPressed
+}//GEN-LAST:event_tblPelangganKeyPressed
 
     private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
         tblPelangganController.setState(TableController.STATE_TAMBAH);
@@ -168,12 +164,12 @@ public class DaftarPasien extends javax.swing.JPanel {
     }//GEN-LAST:event_btnTambah3ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private modules.pasien.BeanPasien beanPasien;
+    private modules.pelanggan.BeanPelanggan beanPelanggan;
     private javax.swing.JButton btnHapus;
     private javax.swing.JButton btnTambah;
     private javax.swing.JButton btnTambah3;
     private javax.swing.JButton btnUbah;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tblPasien;
+    private javax.swing.JTable tblPelanggan;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,4 +1,4 @@
-<?xml version="1.1" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.5" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
   <Properties>
@@ -33,13 +33,13 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabel1" min="-2" pref="253" max="-2" attributes="0"/>
-                      <EmptySpace pref="48" max="32767" attributes="0"/>
+                      <EmptySpace pref="52" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="okButton" min="-2" pref="67" max="-2" attributes="0"/>
                           <Component id="jButton1" alignment="1" min="-2" pref="210" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="jLabel2" alignment="0" pref="511" max="32767" attributes="0"/>
+                  <Component id="jLabel2" alignment="0" pref="515" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -52,7 +52,7 @@
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jLabel1" alignment="1" pref="287" max="32767" attributes="0"/>
+                  <Component id="jLabel1" alignment="1" pref="282" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="jButton1" min="-2" pref="240" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -76,7 +76,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="2"/>
-        <Property name="text" type="java.lang.String" value="&lt;html&gt; &lt;quote&gt; &lt;br/&gt; &lt;strong&gt;Aplikasi Deteksi Penyakit Anjing dengan Metode Backpropagation&lt;/strong&gt;&lt;br/&gt; &lt;br/&gt;  Aplikasi ini dikembangkan dengan menggunakan Matlab, Java 1.6 dan database MySQL. Sebagai IDE dipergunakan Netbeans 6.0.&lt;br/&gt;&lt;br/&gt; Hak Cipta (c) 2011&lt;br/&gt; &lt;br/&gt;&lt;b&gt;Yuli&lt;/b&gt;&lt;br/&gt; &lt;br/&gt; &lt;br/&gt;  &lt;/quote&gt; &lt;/html&gt;"/>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt; &lt;quote&gt; &lt;br/&gt; &lt;strong&gt;Reminder Servis Mobile Berbasis SMS gateway&lt;/strong&gt;&lt;br/&gt; &lt;br/&gt;  Aplikasi ini dikembangkan dengan menggunakan Java 1.6 dan database MySQL. Sebagai IDE dipergunakan Netbeans 6.0.&lt;br/&gt;&lt;br/&gt; Hak Cipta (c) 2010&lt;br/&gt; &lt;br/&gt;&lt;b&gt;Pramudya&lt;/b&gt;&lt;br/&gt; &lt;br/&gt; &lt;br/&gt;  &lt;/quote&gt; &lt;/html&gt;"/>
         <Property name="verticalAlignment" type="int" value="1"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -101,7 +101,10 @@
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/images/DSC00304.jpg"/>
+          <Image iconType="3" name="/images/DSC00304.JPG"/>
+        </Property>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>

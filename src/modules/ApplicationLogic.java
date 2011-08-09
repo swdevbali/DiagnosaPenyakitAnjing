@@ -45,8 +45,8 @@ public class ApplicationLogic {
         return "select IDsms_outbox,no_telp,pesan,status,waktu from sms_outbox Order BY waktu desc";
     }
 
-    public String getQueryDaftarPelanggan() {
-        return "SELECT idpelanggan,nama,alamat,hp,status from pelanggan Order BY nama";
+    public String getQueryDaftarPasien() {
+        return "SELECT idpasien,nama,alamat,hp from pasien Order BY nama";
     }
 
     public String getQueryServisItem(String id) {

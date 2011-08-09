@@ -11,6 +11,7 @@ import core.user.UserManajemen;
 import java.awt.Frame;
 import javax.swing.JOptionPane;
 
+
 /**
  *
  * @author PRAM WEE
@@ -23,7 +24,7 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
         setExtendedState(Frame.MAXIMIZED_BOTH);
         initComponents();
         setTitle(ApplicationInfo.TITLE + " Versi " + ApplicationInfo.VERSION + " oleh " + ApplicationInfo.AUTHOR);
-        scrollUtama.setViewportView(ServisMobil.getInstance());
+        scrollUtama.setViewportView(MenuUtama.getInstance());
 
     }
 
@@ -58,7 +59,7 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
         jMenuItemExit = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         mnuHome = new javax.swing.JMenuItem();
-        mnuPelanggan = new javax.swing.JMenuItem();
+        mnuPasien = new javax.swing.JMenuItem();
         mnuMobil = new javax.swing.JMenuItem();
         mnuSukuCadang = new javax.swing.JMenuItem();
         mnuItemServis = new javax.swing.JMenuItem();
@@ -66,9 +67,6 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
         mnuInbox = new javax.swing.JMenuItem();
         mnuOutbox = new javax.swing.JMenuItem();
         mnuLog = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
 
@@ -136,14 +134,14 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
         });
         jMenu4.add(mnuHome);
 
-        mnuPelanggan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pelanggan.gif"))); // NOI18N
-        mnuPelanggan.setText("Pelanggan");
-        mnuPelanggan.addActionListener(new java.awt.event.ActionListener() {
+        mnuPasien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pelanggan.gif"))); // NOI18N
+        mnuPasien.setText("Pasien");
+        mnuPasien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuPelangganActionPerformed(evt);
+                mnuPasienActionPerformed(evt);
             }
         });
-        jMenu4.add(mnuPelanggan);
+        jMenu4.add(mnuPasien);
 
         mnuMobil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/obat.gif"))); // NOI18N
         mnuMobil.setText("Mobil");
@@ -210,26 +208,6 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
 
         jMenuBar2.add(jMenu4);
 
-        jMenu3.setText("SMS Gateway");
-
-        jMenuItem3.setText("Connect..");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem3);
-
-        jMenuItem4.setText("Broadcast..");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem4);
-
-        jMenuBar2.add(jMenu3);
-
         jMenu2.setMnemonic('h');
         jMenu2.setText("Help");
 
@@ -253,14 +231,14 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(scrollUtama, javax.swing.GroupLayout.DEFAULT_SIZE, 695, Short.MAX_VALUE)
+                .addComponent(scrollUtama, javax.swing.GroupLayout.DEFAULT_SIZE, 683, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(scrollUtama, javax.swing.GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE)
+                .addComponent(scrollUtama, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -277,20 +255,12 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
     }//GEN-LAST:event_jMenuItemExitActionPerformed
 
     private void mnuSukuCadangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuSukuCadangActionPerformed
-        ServisMobil.getInstance().setModul(3);
+        MenuUtama.getInstance().setModul(3);
 }//GEN-LAST:event_mnuSukuCadangActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         AboutBox.getInstance().setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
-
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
-
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-       
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void mnuManajemenPemakaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuManajemenPemakaiActionPerformed
         if (PrivilegeDialog.getInstance().isCorrect()) {
@@ -301,27 +271,27 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
 }//GEN-LAST:event_mnuManajemenPemakaiActionPerformed
 
     private void mnuHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuHomeActionPerformed
-        ServisMobil.getInstance().setModul(0);
+        MenuUtama.getInstance().setModul(0);
 }//GEN-LAST:event_mnuHomeActionPerformed
 
-    private void mnuPelangganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuPelangganActionPerformed
-        ServisMobil.getInstance().setModul(1);
-}//GEN-LAST:event_mnuPelangganActionPerformed
+    private void mnuPasienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuPasienActionPerformed
+        MenuUtama.getInstance().setModul(1);
+}//GEN-LAST:event_mnuPasienActionPerformed
 
     private void mnuMobilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuMobilActionPerformed
-        ServisMobil.getInstance().setModul(2);
+        MenuUtama.getInstance().setModul(2);
 }//GEN-LAST:event_mnuMobilActionPerformed
 
     private void mnuInboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuInboxActionPerformed
-        ServisMobil.getInstance().setModul(5);
+        MenuUtama.getInstance().setModul(5);
 }//GEN-LAST:event_mnuInboxActionPerformed
 
     private void mnuOutboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuOutboxActionPerformed
-        ServisMobil.getInstance().setModul(6);
+        MenuUtama.getInstance().setModul(6);
 }//GEN-LAST:event_mnuOutboxActionPerformed
 
     private void mnuLogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuLogActionPerformed
-        ServisMobil.getInstance().setModul(7);
+        MenuUtama.getInstance().setModul(7);
 }//GEN-LAST:event_mnuLogActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
@@ -330,23 +300,20 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void mnuItemServisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemServisActionPerformed
-        ServisMobil.getInstance().setModul(9);
+        MenuUtama.getInstance().setModul(9);
     }//GEN-LAST:event_mnuItemServisActionPerformed
 
     private void mnuServisMobilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuServisMobilActionPerformed
-        ServisMobil.getInstance().setModul(10);
+        MenuUtama.getInstance().setModul(10);
 }//GEN-LAST:event_mnuServisMobilActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton8;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItemExit;
     private javax.swing.JToolBar jToolBar6;
@@ -357,7 +324,7 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
     private javax.swing.JMenuItem mnuManajemenPemakai;
     private javax.swing.JMenuItem mnuMobil;
     private javax.swing.JMenuItem mnuOutbox;
-    private javax.swing.JMenuItem mnuPelanggan;
+    private javax.swing.JMenuItem mnuPasien;
     private javax.swing.JMenuItem mnuServisMobil;
     private javax.swing.JMenu mnuSistem;
     private javax.swing.JMenuItem mnuSukuCadang;
