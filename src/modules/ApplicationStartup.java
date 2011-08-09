@@ -13,7 +13,6 @@ import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import smsgateway.ATCommand;
 
 /**
  *
@@ -63,9 +62,6 @@ public class ApplicationStartup {
         DB.USE_MYSQL = true;
         DB.DB = "yuli";
         DB.PASSWORD = "adminadmin";
-        ATCommand.getSingleton().setSendPolicy("full");
-        ATCommand.getSingleton().setResponseMessage("response");
-        ATCommand.getSingleton().setTimerExecution(new ReminderServisMobil());
         
         LoginDialog.idpemakai="idpemakai";
     }

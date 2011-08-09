@@ -10,8 +10,6 @@ import core.system.PrivilegeDialog;
 import core.user.UserManajemen;
 import java.awt.Frame;
 import javax.swing.JOptionPane;
-import smsgateway.application.BroadcastDialog;
-import smsgateway.commport.DaftarPort;
 
 /**
  *
@@ -287,11 +285,11 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        DaftarPort.getSingleton().setVisible(true);
+        
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        BroadcastDialog.getSingleton().setVisible(true);
+       
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void mnuManajemenPemakaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuManajemenPemakaiActionPerformed
