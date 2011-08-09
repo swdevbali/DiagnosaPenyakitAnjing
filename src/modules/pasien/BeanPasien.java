@@ -1,5 +1,5 @@
 
-package modules.pelanggan;
+package modules.pasien;
 
 import core.gui.InputPanel;
 import javax.swing.JOptionPane;
@@ -9,10 +9,10 @@ import modules.ApplicationStartup;
  *
  * @author  PRAM WEE
  */
-public class BeanPelanggan extends InputPanel {
+public class BeanPasien extends InputPanel {
 
     /** Creates new form BeanForm */
-    public BeanPelanggan() {
+    public BeanPasien() {
         initComponents();
         super.setPnlUtama(pnlUtama);
         ApplicationStartup.getInstance().initialize();
