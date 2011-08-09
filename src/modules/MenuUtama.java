@@ -48,9 +48,6 @@ public class MenuUtama extends javax.swing.JPanel {
         btnSukuCadang = new javax.swing.JToggleButton();
         btnItemServis = new javax.swing.JToggleButton();
         btnServisMobil = new javax.swing.JToggleButton();
-        btnRiwayatServis = new javax.swing.JToggleButton();
-        btnOutbox = new javax.swing.JToggleButton();
-        btnLog = new javax.swing.JToggleButton();
         scrollUtama = new javax.swing.JScrollPane();
 
         jToolBar1.setRollover(true);
@@ -83,7 +80,7 @@ public class MenuUtama extends javax.swing.JPanel {
 
         buttonGroup1.add(btnMobil);
         btnMobil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/obat.gif"))); // NOI18N
-        btnMobil.setText("Mobil");
+        btnMobil.setText("Gejala");
         btnMobil.setFocusable(false);
         btnMobil.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnMobil.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -96,7 +93,7 @@ public class MenuUtama extends javax.swing.JPanel {
 
         buttonGroup1.add(btnSukuCadang);
         btnSukuCadang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/log.gif"))); // NOI18N
-        btnSukuCadang.setText("Suku Cadang");
+        btnSukuCadang.setText("Penyakit");
         btnSukuCadang.setFocusable(false);
         btnSukuCadang.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnSukuCadang.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -109,7 +106,7 @@ public class MenuUtama extends javax.swing.JPanel {
 
         buttonGroup1.add(btnItemServis);
         btnItemServis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pemesanan.gif"))); // NOI18N
-        btnItemServis.setText("Item Servis");
+        btnItemServis.setText("Knowledge");
         btnItemServis.setFocusable(false);
         btnItemServis.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnItemServis.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -122,7 +119,7 @@ public class MenuUtama extends javax.swing.JPanel {
 
         buttonGroup1.add(btnServisMobil);
         btnServisMobil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pemesanan.gif"))); // NOI18N
-        btnServisMobil.setText("Servis Mobil");
+        btnServisMobil.setText("Rekam Medis");
         btnServisMobil.setFocusable(false);
         btnServisMobil.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnServisMobil.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -132,45 +129,6 @@ public class MenuUtama extends javax.swing.JPanel {
             }
         });
         jToolBar1.add(btnServisMobil);
-
-        buttonGroup1.add(btnRiwayatServis);
-        btnRiwayatServis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/log.gif"))); // NOI18N
-        btnRiwayatServis.setText("Riwayat Servis");
-        btnRiwayatServis.setFocusable(false);
-        btnRiwayatServis.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnRiwayatServis.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnRiwayatServis.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRiwayatServisActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(btnRiwayatServis);
-
-        buttonGroup1.add(btnOutbox);
-        btnOutbox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/outbox.gif"))); // NOI18N
-        btnOutbox.setText("Outbox");
-        btnOutbox.setFocusable(false);
-        btnOutbox.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnOutbox.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnOutbox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnOutboxActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(btnOutbox);
-
-        buttonGroup1.add(btnLog);
-        btnLog.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/log.gif"))); // NOI18N
-        btnLog.setText("Log");
-        btnLog.setFocusable(false);
-        btnLog.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnLog.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnLog.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLogActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(btnLog);
 
         scrollUtama.setBorder(null);
         scrollUtama.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
@@ -217,7 +175,7 @@ public class MenuUtama extends javax.swing.JPanel {
                 btnSukuCadang.setSelected(true);
                 btnSukuCadangActionPerformed(null);
                 break;
-                case 5:
+            /*case 5:
                 btnRiwayatServis.setSelected(true);
                 btnRiwayatServisActionPerformed(null);
                 break;
@@ -236,7 +194,7 @@ public class MenuUtama extends javax.swing.JPanel {
             case 10:
                 btnServisMobil.setSelected(true);
                 btnServisMobilActionPerformed(null);
-                break;
+                break;*/
         }
     }
 
@@ -247,14 +205,6 @@ public class MenuUtama extends javax.swing.JPanel {
     private void btnMobilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMobilActionPerformed
         scrollUtama.setViewportView(DaftarMobil.getInstance());
 }//GEN-LAST:event_btnMobilActionPerformed
-
-    private void btnOutboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOutboxActionPerformed
-        scrollUtama.setViewportView(DaftarOutbox.getInstance());
-}//GEN-LAST:event_btnOutboxActionPerformed
-
-    private void btnLogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogActionPerformed
-        scrollUtama.setViewportView(LogPanel.getInstance());
-}//GEN-LAST:event_btnLogActionPerformed
 
     private void btnSukuCadangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSukuCadangActionPerformed
         scrollUtama.setViewportView(DaftarSukuCadang.getInstance());
@@ -268,18 +218,11 @@ public class MenuUtama extends javax.swing.JPanel {
         scrollUtama.setViewportView(DaftarServisMobil.getInstance());
 }//GEN-LAST:event_btnServisMobilActionPerformed
 
-    private void btnRiwayatServisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRiwayatServisActionPerformed
-        scrollUtama.setViewportView(DaftarRiwayatServis.getInstance());
-    }//GEN-LAST:event_btnRiwayatServisActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton btnHome;
     private javax.swing.JToggleButton btnItemServis;
-    private javax.swing.JToggleButton btnLog;
     private javax.swing.JToggleButton btnMobil;
-    private javax.swing.JToggleButton btnOutbox;
     private javax.swing.JToggleButton btnPelanggan;
-    private javax.swing.JToggleButton btnRiwayatServis;
     private javax.swing.JToggleButton btnServisMobil;
     private javax.swing.JToggleButton btnSukuCadang;
     private javax.swing.ButtonGroup buttonGroup1;

@@ -60,13 +60,10 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
         jMenu4 = new javax.swing.JMenu();
         mnuHome = new javax.swing.JMenuItem();
         mnuPasien = new javax.swing.JMenuItem();
-        mnuMobil = new javax.swing.JMenuItem();
-        mnuSukuCadang = new javax.swing.JMenuItem();
-        mnuItemServis = new javax.swing.JMenuItem();
-        mnuServisMobil = new javax.swing.JMenuItem();
-        mnuInbox = new javax.swing.JMenuItem();
-        mnuOutbox = new javax.swing.JMenuItem();
-        mnuLog = new javax.swing.JMenuItem();
+        mnuGejala = new javax.swing.JMenuItem();
+        mnuPenyakit = new javax.swing.JMenuItem();
+        mnuKnowledge = new javax.swing.JMenuItem();
+        mnuRekamMedis = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
 
@@ -143,68 +140,41 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
         });
         jMenu4.add(mnuPasien);
 
-        mnuMobil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/obat.gif"))); // NOI18N
-        mnuMobil.setText("Mobil");
-        mnuMobil.addActionListener(new java.awt.event.ActionListener() {
+        mnuGejala.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/obat.gif"))); // NOI18N
+        mnuGejala.setText("Gejala");
+        mnuGejala.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuMobilActionPerformed(evt);
+                mnuGejalaActionPerformed(evt);
             }
         });
-        jMenu4.add(mnuMobil);
+        jMenu4.add(mnuGejala);
 
-        mnuSukuCadang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/log.gif"))); // NOI18N
-        mnuSukuCadang.setText("Suku Cadang");
-        mnuSukuCadang.addActionListener(new java.awt.event.ActionListener() {
+        mnuPenyakit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/log.gif"))); // NOI18N
+        mnuPenyakit.setText("Penyakit");
+        mnuPenyakit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuSukuCadangActionPerformed(evt);
+                mnuPenyakitActionPerformed(evt);
             }
         });
-        jMenu4.add(mnuSukuCadang);
+        jMenu4.add(mnuPenyakit);
 
-        mnuItemServis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pemesanan.gif"))); // NOI18N
-        mnuItemServis.setText("Item Servis");
-        mnuItemServis.addActionListener(new java.awt.event.ActionListener() {
+        mnuKnowledge.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pemesanan.gif"))); // NOI18N
+        mnuKnowledge.setText("Knowledge");
+        mnuKnowledge.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuItemServisActionPerformed(evt);
+                mnuKnowledgeActionPerformed(evt);
             }
         });
-        jMenu4.add(mnuItemServis);
+        jMenu4.add(mnuKnowledge);
 
-        mnuServisMobil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/glycerol_a.gif"))); // NOI18N
-        mnuServisMobil.setText("Servis Mobil");
-        mnuServisMobil.addActionListener(new java.awt.event.ActionListener() {
+        mnuRekamMedis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/glycerol_a.gif"))); // NOI18N
+        mnuRekamMedis.setText("Rekam Medis");
+        mnuRekamMedis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuServisMobilActionPerformed(evt);
+                mnuRekamMedisActionPerformed(evt);
             }
         });
-        jMenu4.add(mnuServisMobil);
-
-        mnuInbox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/inbox.gif"))); // NOI18N
-        mnuInbox.setText("Riwayat Servis");
-        mnuInbox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuInboxActionPerformed(evt);
-            }
-        });
-        jMenu4.add(mnuInbox);
-
-        mnuOutbox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/outbox.gif"))); // NOI18N
-        mnuOutbox.setText("Outbox");
-        mnuOutbox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuOutboxActionPerformed(evt);
-            }
-        });
-        jMenu4.add(mnuOutbox);
-
-        mnuLog.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/log.gif"))); // NOI18N
-        mnuLog.setText("Log");
-        mnuLog.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuLogActionPerformed(evt);
-            }
-        });
-        jMenu4.add(mnuLog);
+        jMenu4.add(mnuRekamMedis);
 
         jMenuBar2.add(jMenu4);
 
@@ -254,9 +224,9 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
         System.exit(0);
     }//GEN-LAST:event_jMenuItemExitActionPerformed
 
-    private void mnuSukuCadangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuSukuCadangActionPerformed
+    private void mnuPenyakitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuPenyakitActionPerformed
         MenuUtama.getInstance().setModul(3);
-}//GEN-LAST:event_mnuSukuCadangActionPerformed
+}//GEN-LAST:event_mnuPenyakitActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         AboutBox.getInstance().setVisible(true);
@@ -278,34 +248,22 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
         MenuUtama.getInstance().setModul(1);
 }//GEN-LAST:event_mnuPasienActionPerformed
 
-    private void mnuMobilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuMobilActionPerformed
+    private void mnuGejalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuGejalaActionPerformed
         MenuUtama.getInstance().setModul(2);
-}//GEN-LAST:event_mnuMobilActionPerformed
-
-    private void mnuInboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuInboxActionPerformed
-        MenuUtama.getInstance().setModul(5);
-}//GEN-LAST:event_mnuInboxActionPerformed
-
-    private void mnuOutboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuOutboxActionPerformed
-        MenuUtama.getInstance().setModul(6);
-}//GEN-LAST:event_mnuOutboxActionPerformed
-
-    private void mnuLogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuLogActionPerformed
-        MenuUtama.getInstance().setModul(7);
-}//GEN-LAST:event_mnuLogActionPerformed
+}//GEN-LAST:event_mnuGejalaActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         this.setVisible(false);
         LoginDialog.getInstance().setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
-    private void mnuItemServisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemServisActionPerformed
+    private void mnuKnowledgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuKnowledgeActionPerformed
         MenuUtama.getInstance().setModul(9);
-    }//GEN-LAST:event_mnuItemServisActionPerformed
+    }//GEN-LAST:event_mnuKnowledgeActionPerformed
 
-    private void mnuServisMobilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuServisMobilActionPerformed
+    private void mnuRekamMedisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuRekamMedisActionPerformed
         MenuUtama.getInstance().setModul(10);
-}//GEN-LAST:event_mnuServisMobilActionPerformed
+}//GEN-LAST:event_mnuRekamMedisActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -317,17 +275,14 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItemExit;
     private javax.swing.JToolBar jToolBar6;
+    private javax.swing.JMenuItem mnuGejala;
     private javax.swing.JMenuItem mnuHome;
-    private javax.swing.JMenuItem mnuInbox;
-    private javax.swing.JMenuItem mnuItemServis;
-    private javax.swing.JMenuItem mnuLog;
+    private javax.swing.JMenuItem mnuKnowledge;
     private javax.swing.JMenuItem mnuManajemenPemakai;
-    private javax.swing.JMenuItem mnuMobil;
-    private javax.swing.JMenuItem mnuOutbox;
     private javax.swing.JMenuItem mnuPasien;
-    private javax.swing.JMenuItem mnuServisMobil;
+    private javax.swing.JMenuItem mnuPenyakit;
+    private javax.swing.JMenuItem mnuRekamMedis;
     private javax.swing.JMenu mnuSistem;
-    private javax.swing.JMenuItem mnuSukuCadang;
     private javax.swing.JScrollPane scrollUtama;
     // End of variables declaration//GEN-END:variables
     public void userLogin() {
