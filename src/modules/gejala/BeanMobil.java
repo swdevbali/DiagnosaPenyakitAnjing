@@ -1,4 +1,4 @@
-package modules.mobil;
+package modules.gejala;
 
 import core.gui.InputPanel;
 import modules.ApplicationStartup;

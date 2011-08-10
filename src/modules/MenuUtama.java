@@ -6,7 +6,7 @@ import modules.sukucadang.DaftarSukuCadang;
 import modules.log.LogPanel;
 import modules.outbox.DaftarOutbox;
 import modules.pasien.DaftarPasien;
-import modules.mobil.DaftarMobil;
+import modules.gejala.DaftarMobil;
 import modules.riwayatservis.DaftarRiwayatServis;
 import modules.servismobil.DaftarServisMobil;
 

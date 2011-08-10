@@ -1,5 +1,5 @@
 
-package modules.mobil;
+package modules.gejala;
 
 import modules.ApplicationLogic;
 import core.gui.TableController;
@@ -44,7 +44,7 @@ public class DaftarMobil extends javax.swing.JPanel {
         btnUbah = new javax.swing.JButton();
         btnHapus = new javax.swing.JButton();
         btnTambah3 = new javax.swing.JButton();
-        beanData = new modules.mobil.BeanMobil();
+        beanData = new modules.gejala.BeanMobil();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblData = new javax.swing.JTable();
 
@@ -164,7 +164,7 @@ public class DaftarMobil extends javax.swing.JPanel {
 }//GEN-LAST:event_tblDataMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private modules.mobil.BeanMobil beanData;
+    private modules.gejala.BeanMobil beanData;
     private javax.swing.JButton btnHapus;
     private javax.swing.JButton btnTambah;
     private javax.swing.JButton btnTambah3;
