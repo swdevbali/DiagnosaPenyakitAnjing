@@ -3,11 +3,8 @@ package modules;
 
 import modules.gejala.DaftarGejala;
 import modules.itemservice.DaftarItemService;
-import modules.sukucadang.DaftarSukuCadang;
-import modules.log.LogPanel;
-import modules.outbox.DaftarOutbox;
 import modules.pasien.DaftarPasien;
-import modules.riwayatservis.DaftarRiwayatServis;
+import modules.penyakit.DaftarPenyakit;
 import modules.servismobil.DaftarServisMobil;
 
 /**
@@ -207,7 +204,7 @@ public class MenuUtama extends javax.swing.JPanel {
 }//GEN-LAST:event_btnMobilActionPerformed
 
     private void btnSukuCadangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSukuCadangActionPerformed
-        scrollUtama.setViewportView(DaftarSukuCadang.getInstance());
+        scrollUtama.setViewportView(DaftarPenyakit.getInstance());
 }//GEN-LAST:event_btnSukuCadangActionPerformed
 
     private void btnItemServisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnItemServisActionPerformed

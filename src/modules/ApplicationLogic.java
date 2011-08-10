@@ -65,4 +65,8 @@ public class ApplicationLogic {
         return "SELECT idpasien,nama,alamat,hp from pasien Order BY nama";
         
     }
+
+    public String getQueryDaftarPenyakit() {
+        return "SELECT idpenyakit, nama_penyakit as Penyakit, Deskripsi from Penyakit order by nama_penyakit";
+    }
 }
