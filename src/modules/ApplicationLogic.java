@@ -45,8 +45,8 @@ public class ApplicationLogic {
         return "select IDsms_outbox,no_telp,pesan,status,waktu from sms_outbox Order BY waktu desc";
     }
 
-    public String getQueryDaftarPasien() {
-        return "SELECT idpasien,nama,alamat,hp from pasien Order BY nama";
+    public String getQueryDaftarGejala() {
+        return "SELECT idgejala,nama_gejala as Gejala,Deskripsi from gejala Order BY nama_gejala";
     }
 
     public String getQueryServisItem(String id) {
@@ -59,5 +59,10 @@ public class ApplicationLogic {
 
     public String getQuerySukuCadang() {
         return "SELECT idsuku_cadang, nama_sukucadang as `Suku Cadang`, harga_standar as `Harga Standard`,standar_bulan_service as `Standar Bulan Servis` from suku_cadang order by `nama_sukucadang";
+    }
+
+    public String getQueryDaftarPasien() {
+        return "SELECT idpasien,nama,alamat,hp from pasien Order BY nama";
+        
     }
 }
