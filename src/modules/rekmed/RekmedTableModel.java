@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package modules.penyakit;
+package modules.rekmed;
 
 import javax.swing.table.AbstractTableModel;
 
@@ -11,13 +11,13 @@ import javax.swing.table.AbstractTableModel;
  * @author ekowibowo
  * from here : http://download.oracle.com/javase/tutorial/uiswing/components/table.html#renderer
  */
-public class GejalaPenyakitTableModel extends AbstractTableModel {
+public class RekmedTableModel extends AbstractTableModel {
 
     private String[] columnNames = {"No.", "Status",
         "Gejala",
         "Deskripsi"};
 
-    public GejalaPenyakitTableModel()
+    public RekmedTableModel()
     {
         //TODO : load semua gejala penyakit
     }

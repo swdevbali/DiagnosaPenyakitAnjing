@@ -62,7 +62,6 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
         mnuPasien = new javax.swing.JMenuItem();
         mnuGejala = new javax.swing.JMenuItem();
         mnuPenyakit = new javax.swing.JMenuItem();
-        mnuKnowledge = new javax.swing.JMenuItem();
         mnuRekamMedis = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -158,15 +157,6 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
         });
         jMenu4.add(mnuPenyakit);
 
-        mnuKnowledge.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pemesanan.gif"))); // NOI18N
-        mnuKnowledge.setText("Knowledge");
-        mnuKnowledge.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuKnowledgeActionPerformed(evt);
-            }
-        });
-        jMenu4.add(mnuKnowledge);
-
         mnuRekamMedis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/glycerol_a.gif"))); // NOI18N
         mnuRekamMedis.setText("Rekam Medis");
         mnuRekamMedis.addActionListener(new java.awt.event.ActionListener() {
@@ -257,12 +247,8 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
         LoginDialog.getInstance().setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
-    private void mnuKnowledgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuKnowledgeActionPerformed
-        MenuUtama.getInstance().setModul(9);
-    }//GEN-LAST:event_mnuKnowledgeActionPerformed
-
     private void mnuRekamMedisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuRekamMedisActionPerformed
-        MenuUtama.getInstance().setModul(10);
+        MenuUtama.getInstance().setModul(4);
 }//GEN-LAST:event_mnuRekamMedisActionPerformed
 
 
@@ -277,7 +263,6 @@ public class MainFrame extends javax.swing.JFrame implements AuthenticationListe
     private javax.swing.JToolBar jToolBar6;
     private javax.swing.JMenuItem mnuGejala;
     private javax.swing.JMenuItem mnuHome;
-    private javax.swing.JMenuItem mnuKnowledge;
     private javax.swing.JMenuItem mnuManajemenPemakai;
     private javax.swing.JMenuItem mnuPasien;
     private javax.swing.JMenuItem mnuPenyakit;

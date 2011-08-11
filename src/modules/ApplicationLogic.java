@@ -69,4 +69,8 @@ public class ApplicationLogic {
     public String getQueryDaftarPenyakit() {
         return "SELECT idpenyakit, nama_penyakit as Penyakit, Deskripsi from Penyakit order by nama_penyakit";
     }
+
+    public String getQueryDaftarRekmed() {
+        return "SELECT idrekam_medis,nama as Pasien,tanggal,keterangan from rekam_medis r,pasien p where r.idpasien=p.idpasien";
+    }
 }

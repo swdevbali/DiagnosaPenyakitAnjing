@@ -61,7 +61,7 @@ public class AboutBox extends javax.swing.JDialog {
         });
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel1.setText("<html> <quote> <br/> <strong>Reminder Servis Mobile Berbasis SMS gateway</strong><br/> <br/>  Aplikasi ini dikembangkan dengan menggunakan Java 1.6 dan database MySQL. Sebagai IDE dipergunakan Netbeans 6.0.<br/><br/> Hak Cipta (c) 2010<br/> <br/><b>Pramudya</b><br/> <br/> <br/>  </quote> </html>");
+        jLabel1.setText("<html> <quote> <br/> <strong>Aplikasi Diagnosa Penyakit pada Anjing dengan Metode Backpropagation</strong><br/> <br/>  Aplikasi ini dikembangkan dengan menggunakan Java 1.6 dan database MySQL. Sebagai IDE dipergunakan Netbeans 6.0.<br/><br/> Hak Cipta (c) 2011<br/> <br/><b>Yuli</b><br/> <br/> <br/>  </quote> </html>");
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -69,8 +69,7 @@ public class AboutBox extends javax.swing.JDialog {
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel2.setOpaque(true);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DSC00304.JPG"))); // NOI18N
-        jButton1.setBorder(null);
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/About.jpg"))); // NOI18N
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
         jButton1.setDefaultCapable(false);
@@ -85,11 +84,11 @@ public class AboutBox extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 515, Short.MAX_VALUE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 511, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -99,7 +98,7 @@ public class AboutBox extends javax.swing.JDialog {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)

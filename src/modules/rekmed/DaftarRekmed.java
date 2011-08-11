@@ -1,5 +1,5 @@
 
-package modules.penyakit;
+package modules.rekmed;
 
 import modules.ApplicationLogic;
 import core.gui.TableController;
@@ -8,22 +8,22 @@ import core.gui.TableController;
  *
  * @author  PRAM WEE
  */
-public class DaftarPenyakit extends javax.swing.JPanel {
+public class DaftarRekmed extends javax.swing.JPanel {
 
-    private static DaftarPenyakit instance = null;
+    private static DaftarRekmed instance = null;
     private TableController tblPelangganController = null;
 
-    public static DaftarPenyakit getInstance() {
+    public static DaftarRekmed getInstance() {
         if (instance == null) {
-            instance = new DaftarPenyakit();
+            instance = new DaftarRekmed();
         }
         return instance;
     }
 
-    private DaftarPenyakit() {
+    private DaftarRekmed() {
         initComponents();
-        tblPelangganController = new TableController(this, "penyakit", ApplicationLogic.getInstance().getQueryDaftarPenyakit(), tblPasien, beanPenyakit,"idpenyakit", true);
-        beanPenyakit.setTableController(tblPelangganController);
+        tblPelangganController = new TableController(this, "rekam_medis", ApplicationLogic.getInstance().getQueryDaftarRekmed(), tblPasien, beanRekmed,"idrekam_medis", true);
+        beanRekmed.setTableController(tblPelangganController);
         tblPelangganController.setState(TableController.STATE_BROWSE);
         tblPelangganController.loadTable();
     }
@@ -43,7 +43,7 @@ public class DaftarPenyakit extends javax.swing.JPanel {
         btnUbah = new javax.swing.JButton();
         btnHapus = new javax.swing.JButton();
         btnTambah3 = new javax.swing.JButton();
-        beanPenyakit = new modules.penyakit.BeanPenyakit();
+        beanRekmed = new modules.rekmed.BeanRekmed();
 
         setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -104,8 +104,7 @@ public class DaftarPenyakit extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(beanPenyakit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnTambah)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -114,15 +113,17 @@ public class DaftarPenyakit extends javax.swing.JPanel {
                         .addComponent(btnHapus)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnTambah3))
-                    .addComponent(jScrollPane1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(beanRekmed, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(beanPenyakit, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(beanRekmed, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnHapus)
                     .addComponent(btnUbah)
@@ -130,7 +131,7 @@ public class DaftarPenyakit extends javax.swing.JPanel {
                     .addComponent(btnTambah3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(25, 25, 25))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -159,7 +160,7 @@ public class DaftarPenyakit extends javax.swing.JPanel {
     }//GEN-LAST:event_btnTambah3ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private modules.penyakit.BeanPenyakit beanPenyakit;
+    private modules.rekmed.BeanRekmed beanRekmed;
     private javax.swing.JButton btnHapus;
     private javax.swing.JButton btnTambah;
     private javax.swing.JButton btnTambah3;

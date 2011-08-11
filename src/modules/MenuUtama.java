@@ -2,11 +2,9 @@ package modules;
 
 
 import modules.gejala.DaftarGejala;
-import modules.itemservice.DaftarItemService;
 import modules.pasien.DaftarPasien;
 import modules.penyakit.DaftarPenyakit;
-import modules.servismobil.DaftarServisMobil;
-
+import modules.rekmed.DaftarRekmed;
 /**
  *
  * @author  PRAM WEE
@@ -43,8 +41,7 @@ public class MenuUtama extends javax.swing.JPanel {
         btnPelanggan = new javax.swing.JToggleButton();
         btnMobil = new javax.swing.JToggleButton();
         btnSukuCadang = new javax.swing.JToggleButton();
-        btnItemServis = new javax.swing.JToggleButton();
-        btnServisMobil = new javax.swing.JToggleButton();
+        btnRekamMedis = new javax.swing.JToggleButton();
         scrollUtama = new javax.swing.JScrollPane();
 
         jToolBar1.setRollover(true);
@@ -101,31 +98,18 @@ public class MenuUtama extends javax.swing.JPanel {
         });
         jToolBar1.add(btnSukuCadang);
 
-        buttonGroup1.add(btnItemServis);
-        btnItemServis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pemesanan.gif"))); // NOI18N
-        btnItemServis.setText("Knowledge");
-        btnItemServis.setFocusable(false);
-        btnItemServis.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnItemServis.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnItemServis.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(btnRekamMedis);
+        btnRekamMedis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pemesanan.gif"))); // NOI18N
+        btnRekamMedis.setText("Rekam Medis");
+        btnRekamMedis.setFocusable(false);
+        btnRekamMedis.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnRekamMedis.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnRekamMedis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnItemServisActionPerformed(evt);
+                btnRekamMedisActionPerformed(evt);
             }
         });
-        jToolBar1.add(btnItemServis);
-
-        buttonGroup1.add(btnServisMobil);
-        btnServisMobil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pemesanan.gif"))); // NOI18N
-        btnServisMobil.setText("Rekam Medis");
-        btnServisMobil.setFocusable(false);
-        btnServisMobil.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnServisMobil.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnServisMobil.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnServisMobilActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(btnServisMobil);
+        jToolBar1.add(btnRekamMedis);
 
         scrollUtama.setBorder(null);
         scrollUtama.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
@@ -172,11 +156,11 @@ public class MenuUtama extends javax.swing.JPanel {
                 btnSukuCadang.setSelected(true);
                 btnSukuCadangActionPerformed(null);
                 break;
-            /*case 5:
-                btnRiwayatServis.setSelected(true);
-                btnRiwayatServisActionPerformed(null);
+            case 4:
+                btnRekamMedis.setSelected(true);
+                btnRekamMedisActionPerformed(null);
                 break;
-            case 6:
+            /*case 6:
                 btnOutbox.setSelected(true);
                 btnOutboxActionPerformed(null);
                 break;
@@ -207,20 +191,15 @@ public class MenuUtama extends javax.swing.JPanel {
         scrollUtama.setViewportView(DaftarPenyakit.getInstance());
 }//GEN-LAST:event_btnSukuCadangActionPerformed
 
-    private void btnItemServisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnItemServisActionPerformed
-        scrollUtama.setViewportView(DaftarItemService.getInstance());
-}//GEN-LAST:event_btnItemServisActionPerformed
-
-    private void btnServisMobilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnServisMobilActionPerformed
-        scrollUtama.setViewportView(DaftarServisMobil.getInstance());
-}//GEN-LAST:event_btnServisMobilActionPerformed
+    private void btnRekamMedisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRekamMedisActionPerformed
+        scrollUtama.setViewportView(DaftarRekmed.getInstance());
+}//GEN-LAST:event_btnRekamMedisActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton btnHome;
-    private javax.swing.JToggleButton btnItemServis;
     private javax.swing.JToggleButton btnMobil;
     private javax.swing.JToggleButton btnPelanggan;
-    private javax.swing.JToggleButton btnServisMobil;
+    private javax.swing.JToggleButton btnRekamMedis;
     private javax.swing.JToggleButton btnSukuCadang;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JToolBar jToolBar1;
