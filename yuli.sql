@@ -31,7 +31,7 @@ CREATE TABLE  `yuli`.`gejala` (
   `nama_gejala` varchar(50) CHARACTER SET latin1 NOT NULL DEFAULT '',
   `deskripsi` text CHARACTER SET latin1 NOT NULL,
   PRIMARY KEY (`idgejala`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Dumping data for table `yuli`.`gejala`
@@ -39,6 +39,9 @@ CREATE TABLE  `yuli`.`gejala` (
 
 /*!40000 ALTER TABLE `gejala` DISABLE KEYS */;
 LOCK TABLES `gejala` WRITE;
+INSERT INTO `yuli`.`gejala` VALUES  (1,'d','d'),
+ (2,'kk','kk'),
+ (3,'ddk','kk');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `gejala` ENABLE KEYS */;
 
@@ -109,7 +112,7 @@ CREATE TABLE  `yuli`.`pemakai` (
   `keterangan` varchar(45) CHARACTER SET latin1 NOT NULL,
   `peran` varchar(45) CHARACTER SET latin1 NOT NULL,
   PRIMARY KEY (`idpemakai`)
-) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Dumping data for table `yuli`.`pemakai`
@@ -133,7 +136,7 @@ CREATE TABLE  `yuli`.`penyakit` (
   `nama_penyakit` varchar(50) CHARACTER SET latin1 NOT NULL DEFAULT '',
   `deskripsi` text CHARACTER SET latin1 NOT NULL,
   PRIMARY KEY (`idpenyakit`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Dumping data for table `yuli`.`penyakit`
@@ -141,6 +144,8 @@ CREATE TABLE  `yuli`.`penyakit` (
 
 /*!40000 ALTER TABLE `penyakit` DISABLE KEYS */;
 LOCK TABLES `penyakit` WRITE;
+INSERT INTO `yuli`.`penyakit` VALUES  (1,'cacar air','ga cakep lho'),
+ (2,'aids','please...');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `penyakit` ENABLE KEYS */;
 
@@ -159,8 +164,8 @@ CREATE TABLE  `yuli`.`rekam_medis` (
   PRIMARY KEY (`idrekam_medis`),
   KEY `idpasien` (`idpasien`),
   KEY `idpenyakit` (`idpenyakit`),
-  CONSTRAINT `rekam_medis_ibfk_2` FOREIGN KEY (`idpenyakit`) REFERENCES `penyakit` (`idpenyakit`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `rekam_medis_ibfk_1` FOREIGN KEY (`idpasien`) REFERENCES `pasien` (`idpasien`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `rekam_medis_ibfk_1` FOREIGN KEY (`idpasien`) REFERENCES `pasien` (`idpasien`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `rekam_medis_ibfk_2` FOREIGN KEY (`idpenyakit`) REFERENCES `penyakit` (`idpenyakit`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
@@ -185,8 +190,8 @@ CREATE TABLE  `yuli`.`rekam_medis_gejala` (
   PRIMARY KEY (`idrekam_medis_gejala`),
   KEY `idrekam_medis` (`idrekam_medis`),
   KEY `idgejala` (`idgejala`),
-  CONSTRAINT `rekam_medis_gejala_ibfk_2` FOREIGN KEY (`idgejala`) REFERENCES `gejala` (`idgejala`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `rekam_medis_gejala_ibfk_1` FOREIGN KEY (`idrekam_medis`) REFERENCES `rekam_medis` (`idrekam_medis`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `rekam_medis_gejala_ibfk_1` FOREIGN KEY (`idrekam_medis`) REFERENCES `rekam_medis` (`idrekam_medis`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `rekam_medis_gejala_ibfk_2` FOREIGN KEY (`idgejala`) REFERENCES `gejala` (`idgejala`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
